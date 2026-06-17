@@ -21,7 +21,7 @@ export const HeroSection = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 0.3 }}
-        className="w-full max-w-md aspect-[3/4] relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white"
+        className="w-4/5 max-w-[280px] mx-auto aspect-[3/4] relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white"
       >
         <img
           src={siteConfig.mainPhoto}
