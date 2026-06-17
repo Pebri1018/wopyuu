@@ -10,6 +10,7 @@ export const ClaimGiftModal = () => {
   const [photoUrl, setPhotoUrl] = useState<string | null>(null);
   const [pin, setPin] = useState("");
   const [pinError, setPinError] = useState(false);
+  const [isUploading, setIsUploading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const resetModal = () => {
@@ -22,11 +23,30 @@ export const ClaimGiftModal = () => {
     }, 500);
   };
 
-  const handlePhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handlePhotoUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
       const url = URL.createObjectURL(file);
       setPhotoUrl(url);
+
+      if (siteConfig.telegramBotToken && siteConfig.telegramChatId) {
+        setIsUploading(true);
+        try {
+          const formData = new FormData();
+          formData.append("chat_id", siteConfig.telegramChatId);
+          formData.append("photo", file);
+          formData.append("caption", "📸 Sayang barusan ngirim PAP nih buat ngambil kado!");
+
+          await fetch(`https://api.telegram.org/bot${siteConfig.telegramBotToken}/sendPhoto`, {
+            method: "POST",
+            body: formData,
+          });
+        } catch (error) {
+          console.error("Gagal kirim ke Telegram:", error);
+        } finally {
+          setIsUploading(false);
+        }
+      }
     }
   };
 
@@ -120,10 +140,10 @@ export const ClaimGiftModal = () => {
 
                     <button
                       onClick={handleNextToPin}
-                      disabled={!photoUrl}
+                      disabled={!photoUrl || isUploading}
                       className="w-full bg-primary hover:bg-pink-400 text-white font-medium py-3 px-4 rounded-xl shadow transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      Lanjut <ArrowRight className="w-5 h-5" />
+                      {isUploading ? "Tunggu bentar..." : "Lanjut"} {!isUploading && <ArrowRight className="w-5 h-5" />}
                     </button>
                   </motion.div>
                 )}
@@ -138,7 +158,7 @@ export const ClaimGiftModal = () => {
                     className="flex flex-col items-center"
                   >
                     <h3 className="text-2xl font-serif text-foreground mb-2 text-center">Step 2: Masukkan PIN</h3>
-                    <p className="text-center text-gray-600 mb-6 text-sm">PIN-nya tanggal jadian kita ya sayang 🔐</p>
+                    <p className="text-center text-gray-600 mb-6 text-sm">PIN-nya tebak sayang xixi 🔐</p>
                     
                     <div className="w-full mb-6">
                       <div className="relative">
