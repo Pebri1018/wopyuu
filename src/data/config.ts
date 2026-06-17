@@ -6,4 +6,6 @@ export const siteConfig = {
   showGratitude: true,
   mainPhoto: "/photos/first.jpeg", // Pastikan file ini ada di public/photos/
   whatsappNumber: "6281234567890", // Ganti dengan nomor WA lo (harus pakai 62 di depan)
+  anniversaryPin: "1018", // Ganti dengan PIN rahasia (contoh: 1018 untuk 10 Oktober atau 18 Oktober)
+  boyfriendPhoto: "/photos/boyfriend.jpg", // Foto lu sebagai kado
 };
