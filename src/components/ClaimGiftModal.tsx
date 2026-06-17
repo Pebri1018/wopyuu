@@ -1,7 +1,7 @@
 "use client";
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Gift, X, Camera, Send, Lock, ArrowRight, Heart } from "lucide-react";
+import { Gift, X, Camera, Lock, ArrowRight, Heart } from "lucide-react";
 import { siteConfig } from "@/data/config";
 
 export const ClaimGiftModal = () => {
@@ -41,13 +41,6 @@ export const ClaimGiftModal = () => {
     } else {
       setPinError(true);
     }
-  };
-
-  const handleSendWA = () => {
-    const text = `Hai sayang! Ini aku udah PAP (nanti aku kirim fotonya di chat ini). Ternyata kadonya kamu toh hahaha 🥰`;
-    const waNumber = siteConfig.whatsappNumber.replace(/\D/g, '');
-    const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;
-    window.open(waUrl, "_blank");
   };
 
   return (
@@ -194,16 +187,7 @@ export const ClaimGiftModal = () => {
                       </div>
                     </div>
 
-                    <button
-                      onClick={handleSendWA}
-                      className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-medium py-3 px-4 rounded-xl shadow transition-colors flex items-center justify-center gap-2"
-                    >
-                      <Send className="w-5 h-5" />
-                      Chat Aku Sekarang
-                    </button>
-                    <p className="text-xs text-center text-gray-500 mt-3">
-                      Note: Fotonya tetep jangan lupa dikirim manual ke WA ya!
-                    </p>
+
                   </motion.div>
                 )}
               </AnimatePresence>
