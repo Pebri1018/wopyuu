@@ -33,7 +33,7 @@ export const BouncingCat = () => {
           top: { duration: 5, repeat: Infinity, repeatType: "mirror", ease: "linear" },
           rotate: { duration: 4, repeat: Infinity, ease: "linear" },
         }}
-        className="absolute w-20 h-20 drop-shadow-md opacity-80"
+        className="absolute w-30 h-30 drop-shadow-md opacity-80"
       >
         <img src="/photos/cat2.png" alt="Bouncing Cat 2" className="w-full h-full object-contain" />
       </motion.div>
