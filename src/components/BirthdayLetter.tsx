@@ -9,7 +9,7 @@ export const BirthdayLetter = () => {
         <div className="absolute top-4 left-4 w-4 h-4 bg-primary/20 rounded-full"></div>
         <div className="absolute bottom-4 right-4 w-4 h-4 bg-primary/20 rounded-full"></div>
         
-        <div className="space-y-6 text-lg md:text-xl text-foreground font-serif leading-relaxed">
+        <div className="space-y-6 text-lg md:text-xl text-foreground font-serif leading-relaxed text-justify">
           {letterContent.map((line, index) => (
             <motion.p
               key={index}
