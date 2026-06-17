@@ -9,6 +9,6 @@ export const siteConfig = {
   boyfriendPhoto: "/photos/boyfriend.jpg", // Foto lu sebagai kado
   
   // Telegram Bot Config (Buat ngirim PAP otomatis)
-  telegramBotToken: "", // Isi dengan token bot lu (dari @BotFather)
-  telegramChatId: "", // Isi dengan chat ID lu (dari @userinfobot)
+  telegramBotToken: "8553216374:AAGE1Kpbvn2-FRVNwjXMdhL4phtvJtknfds", // Isi dengan token bot lu (dari @BotFather)
+  telegramChatId: "7337941379", // Isi dengan chat ID lu (dari @userinfobot)
 };
