@@ -9,6 +9,7 @@ import { MemoryWall } from "@/components/MemoryWall";
 import { GratitudeSection } from "@/components/GratitudeSection";
 import { ClosingSection } from "@/components/ClosingSection";
 import { FinalNoteModal } from "@/components/FinalNoteModal";
+import { ClaimGiftModal } from "@/components/ClaimGiftModal";
 import { MiniProgress } from "@/components/MiniProgress";
 import { BouncingCat } from "@/components/BouncingCat";
 
@@ -42,6 +43,7 @@ export default function Home() {
             <GratitudeSection />
             <ClosingSection />
             <FinalNoteModal />
+            <ClaimGiftModal />
           </div>
         </>
       )}

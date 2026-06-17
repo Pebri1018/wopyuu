@@ -5,4 +5,5 @@ export const siteConfig = {
   showMemoryWall: true,
   showGratitude: true,
   mainPhoto: "/photos/first.jpeg", // Pastikan file ini ada di public/photos/
+  whatsappNumber: "6281234567890", // Ganti dengan nomor WA lo (harus pakai 62 di depan)
 };
