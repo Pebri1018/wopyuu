@@ -7,8 +7,8 @@ export const BouncingCat = () => {
       {/* Kucing Pertama */}
       <motion.div
         animate={{
-          left: ["0%", "calc(100% - 6rem)"],
-          top: ["0%", "calc(100% - 6rem)"],
+          left: ["0%", "calc(100% - 4rem)"],
+          top: ["0%", "calc(100% - 4rem)"],
           rotate: 360,
         }}
         transition={{
@@ -16,12 +16,12 @@ export const BouncingCat = () => {
           top: { duration: 4, repeat: Infinity, repeatType: "mirror", ease: "linear" },
           rotate: { duration: 3, repeat: Infinity, ease: "linear" },
         }}
-        className="absolute w-24 h-24 drop-shadow-xl opacity-90"
+        className="absolute w-16 h-16 drop-shadow-xl opacity-90"
       >
         <img src="/photos/cat.png" alt="Bouncing Cat" className="w-full h-full object-contain" />
       </motion.div>
 
-      {/* Kucing Kedua (Lebih Kecil) */}
+      {/* Kucing Kedua */}
       <motion.div
         animate={{
           left: ["calc(100% - 4rem)", "0%"],
