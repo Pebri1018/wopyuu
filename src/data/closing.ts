@@ -1,4 +1,4 @@
 export const closingContent = {
-  title: "Terima kasih sudah hadir di hidup aku.",
+  title: "Semoga kita sama sama terus dan growth bareng ya",
   subtitle: "Selamat ulang tahun sayangku ❤️",
 };

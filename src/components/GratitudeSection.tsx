@@ -15,7 +15,7 @@ export const GratitudeSection = () => {
         className="text-center mb-12"
       >
         <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-3 leading-tight">
-          Kenapa Aku Bersyukur<br />Ketemu Kamu ❤️
+          kenapa aku sangat sukak<br />bersama kamuu ❤️
         </h2>
       </motion.div>
 

@@ -10,22 +10,22 @@ export const memories: Memory[] = [
   {
     id: "1",
     photo: "/photos/1.jpg",
-    title: "Pertama Ketemu",
-    description: "Hari di mana semuanya dimulai...",
+    title: "",
+    description: "foto first aku post xixi",
     rotation: "-rotate-2",
   },
   {
     id: "2",
     photo: "/photos/2.jpg",
-    title: "Jalan-jalan bareng",
-    description: "Pemandangan indah, tapi kamu lebih indah.",
+    title: "",
+    description: "aku sukak iniii 😻",
     rotation: "rotate-3",
   },
   {
     id: "3",
     photo: "/photos/3.jpg",
-    title: "Momen Lucu",
-    description: "Gak akan pernah lupa ketawa kamu hari itu.",
+    title: "",
+    description: "bersama bocill lucuuuuu<3",
     rotation: "-rotate-1",
   }
 ];
