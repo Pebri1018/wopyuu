@@ -10,6 +10,7 @@ import { GratitudeSection } from "@/components/GratitudeSection";
 import { ClosingSection } from "@/components/ClosingSection";
 import { FinalNoteModal } from "@/components/FinalNoteModal";
 import { MiniProgress } from "@/components/MiniProgress";
+import { BouncingCat } from "@/components/BouncingCat";
 
 export default function Home() {
   const [isOpened, setIsOpened] = useState(false);
@@ -32,6 +33,7 @@ export default function Home() {
           <MusicPlayer isPlaying={true} />
           <FloatingHearts />
           <MiniProgress />
+          <BouncingCat />
           
           <div className="flex flex-col">
             <HeroSection />
