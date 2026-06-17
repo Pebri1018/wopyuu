@@ -9,21 +9,21 @@ export interface Memory {
 export const memories: Memory[] = [
   {
     id: "1",
-    photo: "/photos/memory1.jpg",
+    photo: "/photos/1.jpg",
     title: "Pertama Ketemu",
     description: "Hari di mana semuanya dimulai...",
     rotation: "-rotate-2",
   },
   {
     id: "2",
-    photo: "/photos/memory2.jpg",
+    photo: "/photos/2.jpg",
     title: "Jalan-jalan bareng",
     description: "Pemandangan indah, tapi kamu lebih indah.",
     rotation: "rotate-3",
   },
   {
     id: "3",
-    photo: "/photos/memory3.jpg",
+    photo: "/photos/3.jpg",
     title: "Momen Lucu",
     description: "Gak akan pernah lupa ketawa kamu hari itu.",
     rotation: "-rotate-1",
