@@ -27,7 +27,7 @@ export const GratitudeSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: index * 0.15 }}
-            className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-sm border border-pink-100 flex items-center gap-4"
+            className="bg-white/90 p-6 rounded-2xl shadow-sm border border-pink-100 flex items-center gap-4"
           >
             <span className="text-2xl">🌸</span>
             <p className="text-lg font-serif text-gray-700">{reason}</p>

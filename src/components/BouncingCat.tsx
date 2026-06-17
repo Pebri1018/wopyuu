@@ -16,7 +16,8 @@ export const BouncingCat = () => {
           top: { duration: 4, repeat: Infinity, repeatType: "mirror", ease: "linear" },
           rotate: { duration: 3, repeat: Infinity, ease: "linear" },
         }}
-        className="absolute w-20 h-20 drop-shadow-xl opacity-90"
+        className="absolute w-20 h-20 opacity-90"
+        style={{ willChange: "transform" }}
       >
         <img src="/photos/cat.png" alt="Bouncing Cat" className="w-full h-full object-contain" />
       </motion.div>
@@ -33,7 +34,8 @@ export const BouncingCat = () => {
           top: { duration: 5, repeat: Infinity, repeatType: "mirror", ease: "linear" },
           rotate: { duration: 4, repeat: Infinity, ease: "linear" },
         }}
-        className="absolute w-40 h-40 drop-shadow-md opacity-80"
+        className="absolute w-40 h-40 opacity-80"
+        style={{ willChange: "transform" }}
       >
         <img src="/photos/cat2.png" alt="Bouncing Cat 2" className="w-full h-full object-contain" />
       </motion.div>

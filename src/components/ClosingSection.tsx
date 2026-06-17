@@ -10,7 +10,7 @@ export const ClosingSection = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="max-w-xl w-full bg-white/90 backdrop-blur-md p-10 md:p-16 rounded-[3rem] shadow-2xl text-center relative overflow-hidden"
+        className="max-w-xl w-full bg-white/95 p-10 md:p-16 rounded-[3rem] shadow-xl text-center relative overflow-hidden"
       >
         <div className="absolute inset-0 border-[8px] border-primary/20 rounded-[3rem] m-4 pointer-events-none"></div>
         

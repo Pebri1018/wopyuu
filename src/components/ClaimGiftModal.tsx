@@ -12,6 +12,8 @@ export const ClaimGiftModal = () => {
   const [pinError, setPinError] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const [noButtonPos, setNoButtonPos] = useState({ x: 0, y: 0 });
+  const [showFinalLove, setShowFinalLove] = useState(false);
 
   const resetModal = () => {
     setIsOpen(false);
@@ -48,6 +50,17 @@ export const ClaimGiftModal = () => {
         }
       }
     }
+  };
+
+  const handleSuka = () => {
+    setShowFinalLove(true);
+  };
+
+  const moveNoButton = () => {
+    setNoButtonPos({
+      x: Math.random() * 150 - 75,
+      y: Math.random() * -100 - 20
+    });
   };
 
   const handleNextToPin = () => {
@@ -207,7 +220,37 @@ export const ClaimGiftModal = () => {
                       </div>
                     </div>
 
-
+                    {!showFinalLove ? (
+                      <>
+                        <p className="text-center text-gray-800 mb-4 font-medium">Apakah kamu suka kadonyaa?</p>
+                        <div className="flex justify-center items-center relative w-full h-16">
+                          <button
+                            onClick={handleSuka}
+                            className="bg-primary hover:bg-pink-400 text-white font-medium py-2 px-8 rounded-xl shadow transition-transform hover:scale-105 active:scale-95 z-10"
+                          >
+                            Suka ❤️
+                          </button>
+                          
+                          <motion.button
+                            animate={{ x: noButtonPos.x, y: noButtonPos.y }}
+                            onHoverStart={moveNoButton}
+                            onClick={moveNoButton}
+                            className="bg-gray-300 hover:bg-gray-400 text-gray-700 font-medium py-2 px-8 rounded-xl shadow absolute z-20"
+                            style={{ left: "55%" }}
+                          >
+                            Ngga
+                          </motion.button>
+                        </div>
+                      </>
+                    ) : (
+                      <motion.p 
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        className="text-center text-pink-500 font-bold text-2xl"
+                      >
+                        Yeayyy! I Love You!!! ❤️❤️❤️
+                      </motion.p>
+                    )}
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -216,6 +259,30 @@ export const ClaimGiftModal = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {showFinalLove && (
+        <div className="fixed inset-0 pointer-events-none z-[200] overflow-hidden">
+          {Array.from({ length: 40 }).map((_, i) => (
+            <motion.div
+              key={`final-heart-${i}`}
+              initial={{ y: "110vh", opacity: 0, x: "50vw" }}
+              animate={{
+                y: "-10vh",
+                opacity: [0, 1, 1, 0],
+                x: `${Math.random() * 100}vw`
+              }}
+              transition={{
+                duration: Math.random() * 2 + 2,
+                ease: "easeOut",
+                delay: Math.random() * 0.5
+              }}
+              className="absolute text-5xl"
+            >
+              ❤️
+            </motion.div>
+          ))}
+        </div>
+      )}
     </>
   );
 };
